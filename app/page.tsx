@@ -131,7 +131,7 @@ export default function Home() {
                 <span className="text-sm text-slate-400">Featured insight</span>
               </div>
 
-              <div className="mt-6 flex aspect-[5/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#173B65] via-[#285A88] to-[#A9CBE5] p-8">
+              <div className="mt-6 flex aspect-5/3 items-center justify-center overflow-hidden rounded-2xl bg-linear-to-br from-[#173B65] via-[#285A88] to-[#A9CBE5] p-8">
                 <div className="w-full max-w-xs rounded-2xl border border-white/30 bg-white/10 p-6 text-white shadow-lg backdrop-blur-sm">
                   <div className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-2xl">

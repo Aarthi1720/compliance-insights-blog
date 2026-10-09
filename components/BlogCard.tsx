@@ -20,7 +20,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#173B65]"
       >
         {/* Cover image */}
-        <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+        <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
           <Image
             src={post.coverImage}
             alt={`${post.category} article cover`}
@@ -50,7 +50,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             {post.excerpt}
           </p>
 
-          <div className="mt-auto mt-6 flex items-center justify-between gap-3 border-t border-slate-100 pt-5">
+          <div className="mt-auto flex items-center justify-between gap-3 border-t border-slate-100 pt-5">
             <span className="min-w-0 truncate text-sm font-medium text-slate-700">
               By {post.author}
             </span>

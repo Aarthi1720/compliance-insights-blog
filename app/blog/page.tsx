@@ -79,7 +79,7 @@ export default async function BlogPage({
         {isOutOfRange ? (
           <div className="rounded-2xl border border-slate-200 bg-white px-6 py-12 text-center">
             <h2 className="text-2xl font-bold text-[#142D4E]">
-              This page doesn't exist
+              This page doesn&apos;t exist
             </h2>
             <p className="mt-3 text-slate-600">
               There are currently {totalPages} pages of articles.
