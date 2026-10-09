@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "iso-certification-guide",
+    "title": "A Practical Guide to ISO Certification for Growing Businesses",
+    "excerpt": "Understand the certification process, prepare your documentation, and build a management system that supports consistent quality.",
+    "coverImage": "/images/iso-certification.jpg",
+    "category": "ISO Certification",
+    "author": "Priya Sharma",
+    "publishedAt": "2026-09-15",
+    "readTimeMinutes": 6,
+    "content": [
+      "ISO certification helps organizations establish consistent processes and demonstrate their commitment to quality.",
+      "Start by understanding the requirements relevant to your organization, reviewing existing processes, and identifying gaps.",
+      "Prepare the necessary documentation, train employees, and conduct internal audits before the certification audit.",
+      "Continuous improvement after certification helps maintain standards and supports long-term business growth."
+    ]
+  },
+  {
+    "slug": "quality-management-principles",
+    "title": "Seven Quality Management Principles Every Team Should Know",
+    "excerpt": "Explore how customer focus, leadership, process improvement, and evidence-based decisions contribute to better business outcomes.",
+    "coverImage": "/images/quality-management.jpg",
+    "category": "Quality Management",
+    "author": "Arun Kumar",
+    "publishedAt": "2026-09-18",
+    "readTimeMinutes": 8,
+    "content": [
+      "Quality management helps organizations deliver consistent products and services while meeting customer expectations.",
+      "Customer focus, effective leadership, employee engagement, and a process-based approach are important foundations.",
+      "Teams can improve results by making evidence-based decisions, managing relationships, and reviewing performance regularly.",
+      "Quality management works best when improvement becomes part of everyday operations."
+    ]
+  },
+  {
+    "slug": "audit-readiness-checklist",
+    "title": "How to Prepare Your Organization for a Successful Compliance Audit",
+    "excerpt": "Use a structured preparation process to organize records, review procedures, assign responsibilities, and reduce last-minute surprises.",
+    "coverImage": "/images/audit-readiness.jpg",
+    "category": "Audit Readiness",
+    "author": "Meera Krishnan",
+    "publishedAt": "2026-09-22",
+    "readTimeMinutes": 5,
+    "content": [
+      "Audit preparation begins with understanding the audit scope, applicable requirements, and expected evidence.",
+      "Organize records, review procedures, and assign clear responsibilities to the relevant team members.",
+      "Conduct an internal review to identify gaps and address outstanding issues before the audit.",
+      "After the audit, document findings and use them to guide corrective actions and continuous improvement."
+    ]
+  }
+]
