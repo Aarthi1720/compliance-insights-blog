@@ -4,6 +4,12 @@ A responsive blog application built for a consulting and compliance business. It
 
 The application includes a paginated blog listing, category filtering, individual article pages, and responsive layouts for desktop, tablet, and mobile devices.
 
+## 🔗 Live Demo
+
+**Live Website:** https://compliance-insights-blog.vercel.app
+
+**GitHub Repository:** https://github.com/Aarthi1720/compliance-insights-blog
+
 ## Features
 
 ### Blog Listing
