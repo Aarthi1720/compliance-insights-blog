@@ -4,9 +4,13 @@ import type { BlogPost } from "@/lib/types";
 
 type BlogCardProps = {
   post: BlogPost;
+  priority?: boolean;
 };
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({
+  post,
+  priority = false,
+}: BlogCardProps) {
   const formattedDate = new Intl.DateTimeFormat("en-IN", {
     day: "numeric",
     month: "short",
@@ -27,6 +31,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             fill
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             className="object-cover transition duration-500 group-hover:scale-105"
+            loading={priority ? "eager" : "lazy"}
           />
 
           <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-[#173B65] shadow-sm">

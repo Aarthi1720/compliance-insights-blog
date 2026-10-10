@@ -3,15 +3,29 @@ import Link from "next/link";
 type PaginationProps = {
   currentPage: number;
   totalPages: number;
+  category?: string;
 };
 
 export default function Pagination({
   currentPage,
   totalPages,
+  category,
 }: PaginationProps) {
   if (totalPages <= 1) {
     return null;
   }
+
+  const getPageUrl = (page: number) => {
+    const params = new URLSearchParams();
+
+    params.set("page", String(page));
+
+    if (category) {
+      params.set("category", category);
+    }
+
+    return `/blog?${params.toString()}`;
+  };
 
   return (
     <nav
@@ -20,7 +34,7 @@ export default function Pagination({
     >
       {currentPage > 1 ? (
         <Link
-          href={`/blog?page=${currentPage - 1}`}
+          href={getPageUrl(currentPage - 1)}
           className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[#173B65] hover:text-[#173B65]"
         >
           Previous
@@ -35,7 +49,7 @@ export default function Pagination({
         (page) => (
           <Link
             key={page}
-            href={`/blog?page=${page}`}
+            href={getPageUrl(page)}
             aria-current={currentPage === page ? "page" : undefined}
             className={`flex h-10 w-10 items-center justify-center rounded-lg text-sm font-semibold transition ${
               currentPage === page
@@ -50,7 +64,7 @@ export default function Pagination({
 
       {currentPage < totalPages ? (
         <Link
-          href={`/blog?page=${currentPage + 1}`}
+          href={getPageUrl(currentPage + 1)}
           className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-[#173B65] hover:text-[#173B65]"
         >
           Next

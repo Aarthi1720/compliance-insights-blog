@@ -22,10 +22,19 @@ export function getTotalPages(): number {
   return Math.ceil(getTotalPosts() / POSTS_PER_PAGE);
 }
 
-export function getPostsPage(page: number): PaginatedPosts {
-  const totalPosts = getTotalPosts();
-  const totalPages = getTotalPages();
+export function getPostsPage(
+  page: number,
+  category?: string,
+): PaginatedPosts {
+  // Filter articles before pagination.
+  const filteredPosts = category
+    ? posts.filter((post) => post.category === category)
+    : posts;
 
+  const totalPosts = filteredPosts.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+  // Keep the requested page within the available page range.
   const currentPage = Math.min(
     Math.max(1, Math.trunc(page) || 1),
     Math.max(1, totalPages),
@@ -34,7 +43,7 @@ export function getPostsPage(page: number): PaginatedPosts {
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
 
   return {
-    posts: posts.slice(startIndex, startIndex + POSTS_PER_PAGE),
+    posts: filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE),
     currentPage,
     totalPages,
     totalPosts,
