@@ -7,10 +7,7 @@ type BlogCardProps = {
   priority?: boolean;
 };
 
-export default function BlogCard({
-  post,
-  priority = false,
-}: BlogCardProps) {
+export default function BlogCard({ post, priority = false }: BlogCardProps) {
   const formattedDate = new Intl.DateTimeFormat("en-IN", {
     day: "numeric",
     month: "short",
@@ -27,7 +24,7 @@ export default function BlogCard({
         <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
           <Image
             src={post.coverImage}
-            alt={`${post.category} article cover`}
+            alt={post.title}
             fill
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             className="object-cover transition duration-500 group-hover:scale-105"
